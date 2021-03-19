@@ -1,0 +1,38 @@
+#atmospheric purifier	nohab*
+#attack moon		nohab*
+#automated stripmine	nohab*
+#B planetcraft		nohab*
+#Crystal megabore	nohab*
+#Dyn core ign		nohab*
+#equa shipyard		nohab*
+#geotherm stab		nohab*
+#lunar spec disco	nohab*
+#Macroatmospheric stab	nohab*
+#orbital art eco	nohab*
+#planetary computer	nohab*
+#substell ign		nohab*
+#SUCC			nohab*
+#Yggdrasil Orchid	nohab*
+#
+#world habitats disabled
+
+#pm_plantary_hab_imposs
+
+#add_modifier = { modifier = plantary_hab_imposs }
+#remove_modifier = { modifier = plantary_hab_imposs }
+
+#has_modifier = plantary_hab_imposs
+
+
+
+#remove_modifier = { modifier = lifeless_temperate }
+#modifier = lifeless_foggy
+#modifier = lifeless_foggy_gases days
+#modifier = lifeless_torrid
+
+
+
+
+
+
+

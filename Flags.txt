@@ -1,0 +1,42 @@
+#Flags that can be checked from other mods
+
+#global flags
+#set_global_flag
+#has_global_flag
+#remove_global_flag
+#How to use
+#potential = {
+#	has_global_flag = 
+#}
+
+
+#Planetary Diversity
+#planetarydiversity
+
+#Planetary Diversity Planetary Habitats
+#planetarydiversityhabitats
+
+#TODO Either Split off seperate mods so for Exotic, Unique, and Shroud Mods or find something unique to each mod that can be used to set a global flag
+
+#planetarydiversityexotic
+#planetarydiversityunique
+#planetarydiversityshroud
+#planetarydiversityarcology
+
+#planet flags
+#set_planet_flag
+#has_planet_flag
+#remove_planet_flag
+#set_planet_flag = planetaryhabitatimpossible
+#How to use
+#potential = {
+#					has_planet_flag = planetaryhabitatimpossible
+#}
+
+#Flag that will be used to disable planetary habitats from built on a planet due to certain megastructures
+
+#planetaryhabitatimpossible
+#used_to_be_hothouse
+
+#Giga Planets
+#

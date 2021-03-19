@@ -1,0 +1,21 @@
+#TODO add planetary deposits that correspond witht the decisions that lead to converting Planetary Habitat into the equivalent Giga world.
+#The new deposits will add district capaicty.
+
+#############################
+#Barren Habitat Conversion
+#############################
+#d_core_activation_research_stations: Add research Jobs?
+#disappear after teraforming completion
+
+#d_focused_hypercoil: Add research Jobs?
+#d_activated_hypercoil: Add research Jobs?
+
+#d_venting_fissures: Mining, Gas?
+#d_mining_fissures: Mining, possible gas but at a reduced level
+
+#d_planetary_power_grid: Energy districts?
+#no change after conversion
+
+
+
+

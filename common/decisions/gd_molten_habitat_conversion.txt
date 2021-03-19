@@ -1,0 +1,264 @@
+#Molten Habitat
+#TODO Create Decisions that will allow the lifeless world to have the special world type modifier for Ammonia, Methane, Ash or Auqatic
+#TODO The process of converting a world needs to have as many or more steps than the gigastructure route
+
+#Identify Techtonic Hotspots
+decision_convert_to_torrid_world_0 = {
+	owned_planets_only = yes
+	#icon = decision_ecoarcology_project
+	prerequisites = { giga_tech_terraform_molten }
+	enactment_time = 3600
+	resources = {
+		category = decisions
+		cost = {
+			influence = 50
+			alloys = 2000
+		}
+	}
+	potential = {
+	#TODO add additional tech requirements
+		NOR = { 
+			has_global_flag = geothermal_disabled
+			has_modifier = gd_molten_terraforming_identify_techtonic_hotspots
+			has_modifier = gd_molten_terraforming_cooling_beam_facilities
+			has_modifier = gd_molten_terraforming_solar_capture_array
+			has_modifier = gd_molten_terraforming_reactor_grid
+
+		}
+		is_planet_class = pc_pd_molten_hab
+	}
+	#allow = {
+	#	custom_tooltip = {
+			#TODO add tool tips
+			#fail_text = temperate_terraforming_machinary_requirments_met
+	#	}
+	#}
+	effect = {
+		# Make Lifeless Torrid worlds
+		 #TODO add tool tips
+		#custom_tooltip = decision_arcology_project_effects
+		hidden_effect = {
+			add_modifier = { modifier = gd_molten_terraforming_identify_techtonic_hotspots }
+#TODO Create seperate decisions for different exotic worlds
+#			IF = {
+#				limit = { owner = { has_trait = trait_pc_ammonia_preference } }
+#				IF = { limit = { NOT = { has_modifier = ammonia} }	add_modifier = { modifier = #ammonia } }
+#				set_planet_entity = { picture = pc_ammonia }
+#			}
+			#TODO create a new planet event
+			#planet_event = { id =  }
+		}
+	}
+	ai_weight = { weight = 5 }
+}
+
+#Cooling Beam Facilities
+decision_convert_to_torrid_world_1 = {
+	owned_planets_only = yes
+	#icon = decision_ecoarcology_project
+	prerequisites = { giga_tech_terraform_molten }
+	enactment_time = 3600
+	resources = {
+		category = decisions
+		cost = {
+			energy = 1500
+			alloys = 4600
+		}
+	}
+	potential = {
+	#TODO add additional tech requirements
+		NOR = { 
+			has_global_flag = geothermal_disabled
+			has_modifier = gd_molten_terraforming_cooling_beam_facilities
+			has_modifier = gd_molten_terraforming_solar_capture_array
+			has_modifier = gd_molten_terraforming_reactor_grid
+		}
+		is_planet_class = pc_pd_molten_hab
+		has_modifier = gd_molten_terraforming_identify_techtonic_hotspots
+	}
+	#allow = {
+	#	custom_tooltip = {
+			#TODO add tool tips
+			#fail_text = temperate_terraforming_machinary_requirments_met
+	#	}
+	#}
+	effect = {
+		# Make Lifeless Torrid worlds
+		 #TODO add tool tips
+		#custom_tooltip = decision_arcology_project_effects
+		hidden_effect = {
+			add_modifier = { modifier = gd_molten_terraforming_cooling_beam_facilities }
+			remove_modifier = gd_molten_terraforming_identify_techtonic_hotspots
+#TODO Create seperate decisions for different exotic worlds
+#			IF = {
+#				limit = { owner = { has_trait = trait_pc_ammonia_preference } }
+#				IF = { limit = { NOT = { has_modifier = ammonia} }	add_modifier = { modifier = #ammonia } }
+#				set_planet_entity = { picture = pc_ammonia }
+#			}
+			#TODO create a new planet event
+			#planet_event = { id =  }
+		}
+	}
+	ai_weight = { weight = 5 }
+}
+
+#Solar Capture Array
+decision_convert_to_torrid_world_2 = {
+	owned_planets_only = yes
+	#icon = decision_ecoarcology_project
+	prerequisites = { giga_tech_terraform_molten }
+	enactment_time = 3600
+	resources = {
+		category = decisions
+		cost = {
+			energy = 3000
+			alloys = 4700
+		}
+	}
+	potential = {
+	#TODO add additional tech requirements
+		NOR = { 
+			has_global_flag = geothermal_disabled
+			has_modifier = gd_molten_terraforming_identify_techtonic_hotspots
+			has_modifier = gd_molten_terraforming_solar_capture_array
+			has_modifier = gd_molten_terraforming_reactor_grid
+		}
+		is_planet_class = pc_pd_molten_hab
+		has_modifier = gd_molten_terraforming_cooling_beam_facilities
+	}
+	#allow = {
+	#	custom_tooltip = {
+			#TODO add tool tips
+			#fail_text = temperate_terraforming_machinary_requirments_met
+	#	}
+	#}
+	effect = {
+		# Make Lifeless Torrid worlds
+		 #TODO add tool tips
+		#custom_tooltip = decision_arcology_project_effects
+		hidden_effect = {
+			add_modifier = { modifier = gd_molten_terraforming_solar_capture_array }
+			remove_modifier = gd_molten_terraforming_cooling_beam_facilities
+#TODO Create seperate decisions for different exotic worlds
+#			IF = {
+#				limit = { owner = { has_trait = trait_pc_ammonia_preference } }
+#				IF = { limit = { NOT = { has_modifier = ammonia} }	add_modifier = { modifier = #ammonia } }
+#				set_planet_entity = { picture = pc_ammonia }
+#			}
+			#TODO create a new planet event
+			#planet_event = { id =  }
+		}
+	}
+	ai_weight = { weight = 5 }
+}
+
+
+#Bring Reactors Online
+decision_convert_to_torrid_world_3 = {
+	owned_planets_only = yes
+	#icon = decision_ecoarcology_project
+	prerequisites = { giga_tech_terraform_molten }
+	enactment_time = 3600
+	resources = {
+		category = decisions
+		cost = {
+			energy = 7500
+		}
+	}
+	potential = {
+	#TODO add additional tech requirements
+		NOR = { 
+			has_global_flag = geothermal_disabled
+			has_modifier = gd_molten_terraforming_identify_techtonic_hotspots
+			has_modifier = gd_molten_terraforming_cooling_beam_facilities
+			has_modifier = gd_molten_terraforming_reactor_grid
+		}
+		is_planet_class = pc_pd_molten_hab
+		has_modifier = gd_molten_terraforming_solar_capture_array
+	}
+	#allow = {
+	#	custom_tooltip = {
+			#TODO add tool tips
+			#fail_text = temperate_terraforming_machinary_requirments_met
+	#	}
+	#}
+	effect = {
+		# Make Lifeless Torrid worlds
+		 #TODO add tool tips
+		#custom_tooltip = decision_arcology_project_effects
+		hidden_effect = {
+			add_modifier = { modifier = gd_molten_terraforming_reactor_grid }
+			remove_modifier = gd_molten_terraforming_solar_capture_array
+#TODO Create seperate decisions for different exotic worlds
+#			IF = {
+#				limit = { owner = { has_trait = trait_pc_ammonia_preference } }
+#				IF = { limit = { NOT = { has_modifier = ammonia} }	add_modifier = { modifier = #ammonia } }
+#				set_planet_entity = { picture = pc_ammonia }
+#			}
+			#TODO create a new planet event
+			#planet_event = { id =  }
+		}
+	}
+	ai_weight = { weight = 5 }
+}
+
+
+#Initiate Terraforming
+decision_convert_to_torrid_world_4 = { #Initiate Terraforming
+	owned_planets_only = yes
+	#icon = decision_ecoarcology_project
+	prerequisites = { giga_tech_terraform_molten }
+	enactment_time = 3600
+	resources = {
+		category = decisions
+		cost = {
+			energy = 2000
+		}
+	}
+	potential = {
+	#TODO add additional tech requirements
+		NOR = { 
+			has_global_flag = geothermal_disabled
+			has_modifier = gd_molten_terraforming_identify_techtonic_hotspots
+			has_modifier = gd_molten_terraforming_cooling_beam_facilities
+			has_modifier = gd_molten_terraforming_solar_capture_array
+		}
+		is_planet_class = pc_pd_molten_hab
+		has_modifier = gd_molten_terraforming_reactor_grid
+	}
+	#allow = {
+	#	custom_tooltip = {
+			#TODO add tool tips
+			#fail_text = temperate_terraforming_machinary_requirments_met
+	#	}
+	#}
+	effect = {
+		# Make Lifeless Torrid worlds
+		 #TODO add tool tips
+		#custom_tooltip = decision_arcology_project_effects
+		hidden_effect = {
+			remove_deposit = d_expanded_dome_system
+			remove_modifier = master_builders_habitats
+			remove_modifier = master_builders_habitats
+			remove_modifier = gpm_habitat_engineering
+			remove_modifier = gpm_habitat_engineering_mastery
+			remove_modifier = gpm_habitat_engineering_void_mastery
+			remove_modifier = gd_molten_terraforming_reactor_grid
+			add_building = building_major_capital
+			change_pc = pc_ll_torrid
+			giga_reroll_lifeless = yes
+			add_modifier = { modifier = lifeless_torrid }
+			add_modifier = { modifier = lifeless_torrid_tectonics days = 1800 }
+			giga_create_planet_deposits = yes
+#TODO Create seperate decisions for different exotic worlds
+#			IF = {
+#				limit = { owner = { has_trait = trait_pc_ammonia_preference } }
+#				IF = { limit = { NOT = { has_modifier = ammonia} }	add_modifier = { modifier = #ammonia } }
+#				set_planet_entity = { picture = pc_ammonia }
+#			}
+			#TODO create a new planet event
+			#planet_event = { id =  }
+		}
+	}
+	ai_weight = { weight = 5 }
+}
